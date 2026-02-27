@@ -14,34 +14,31 @@ export default function SignupModal({ close }) {
 
       {/* Center Popup */}
       <motion.div
-        initial={{ scale: 0.6, opacity: 0, rotateX: -15 }}
-        animate={{ scale: 1, opacity: 1, rotateX: 0 }}
-        exit={{ scale: 0.6, opacity: 0, rotateX: -15 }}
-        transition={{ duration: 0.5, ease: "easeOut" }}
-        className="fixed inset-0 flex items-center justify-center z-30"
-      >
-        <div className="bg-white w-[420px] p-10 rounded-2xl shadow-2xl">
-          <h2 className="text-3xl font-bold text-gray-800 mb-6 text-center">
+  initial={{ scale: 0.8, opacity: 0, y: 40 }}
+  animate={{ scale: 1, opacity: 1, y: 0 }}
+  exit={{ scale: 0.8, opacity: 0, y: 40 }}
+  transition={{ type: "spring", stiffness: 120, damping: 15 }}
+  className="fixed inset-0 flex items-center justify-center z-30"
+>
+        <div className="bg-white w-[420px] p-10 rounded-2xl shadow-2xl transform transition duration-300 hover:scale-[1.02]">
+          <h2 className="text-3xl font-bold text-gray-900 mb-6 text-center tracking-tight">
             Create Account
           </h2>
 
           <div className="space-y-4">
-            <input
-              type="text"
-              placeholder="Full Name"
-              className="w-full border border-gray-300 rounded-md px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500"
-            />
+            
 
             <input
               type="email"
               placeholder="Email"
-              className="w-full border border-gray-300 rounded-md px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="w-full border border-gray-200 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition"
             />
 
             <input
               type="password"
               placeholder="Password"
-              className="w-full border border-gray-300 rounded-md px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="w-full border border-gray-200 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition"  
+              
             />
 
             <button className="w-full bg-blue-600 text-white py-3 rounded-md hover:bg-blue-700 transition">
